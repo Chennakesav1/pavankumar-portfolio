@@ -77,6 +77,15 @@
         .typed-text { color: var(--accent-main); text-shadow: var(--accent-glow); border-right: 3px solid var(--accent-main); padding-right: 5px; animation: blinkCursor 0.7s infinite; }
         @keyframes blinkCursor { 50% { border-color: transparent; } }
 
+        /* Featured Work Row */
+        .featured-work { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+        .featured-label { font-size: 0.85rem; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; font-weight: 600;}
+        .featured-icons { display: flex; gap: 1.5rem; }
+        .f-icon-container { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: var(--accent-main); text-decoration: none; transition: 0.3s; cursor: pointer; }
+        .f-icon-container i { font-size: 1.8rem; }
+        .f-icon-container span { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; }
+        @media (hover: hover) { .f-icon-container:hover { transform: translateY(-5px); color: var(--text-main); text-shadow: var(--accent-glow); } .f-icon-container:hover span { color: var(--text-main); } }
+
         .hero-image-container { flex: 1; display: flex; justify-content: center; align-items: center; position: relative; width: 400px; height: 400px; }
         .profile-pic { width: clamp(250px, 30vw, 320px); height: clamp(250px, 30vw, 320px); object-fit: cover; border-radius: 50%; z-index: 5; border: 5px solid var(--bg-dark); background-color: var(--bg-card); }
         .rotating-ring { position: absolute; width: clamp(280px, 33vw, 360px); height: clamp(280px, 33vw, 360px); border-radius: 50%; border: 2px solid transparent; background: linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box, linear-gradient(90deg, transparent, var(--accent-main), transparent) border-box; animation: rotateRing 10s linear infinite; }
@@ -235,6 +244,7 @@
             section { padding: clamp(4rem, 6vh, 5rem) 5%; } 
             .hero { flex-direction: column-reverse; text-align: center; gap: 3rem; padding-top: 120px;} 
             .hero-content { text-align: center; display: flex; flex-direction: column; align-items: center;}
+            .featured-work { justify-content: center; flex-direction: column; gap: 1rem;}
             .hero-buttons { justify-content: center; }
             .modal-grid { grid-template-columns: 1fr; }
         }
@@ -259,6 +269,9 @@
             .profile-pic { width: 220px; height: 220px; }
             .rotating-ring { width: 250px; height: 250px; }
             .rotating-ring.inner { width: 280px; height: 280px; }
+
+            .featured-icons { flex-wrap: wrap; justify-content: center; gap: 1.2rem;}
+            .f-icon-container i { font-size: 1.5rem; }
             
             .project-actions { flex-direction: column; } 
             
@@ -309,6 +322,16 @@
             <div class="typing-container"><span class="typed-text"></span></div>
             <p>A B.Tech ECE graduate turning complex engineering logic into seamless, intuitive user experiences. Specializing in mobile systems, B2B dashboards, and bridging the gap between logic and human-centered design.</p>
             
+            <div class="featured-work">
+                <span class="featured-label">Featured Work:</span>
+                <div class="featured-icons">
+                    <a href="#projects" class="f-icon-container" title="Expense Analytics"><i class="fas fa-chart-pie"></i><span>Expense</span></a>
+                    <a href="#projects" class="f-icon-container" title="SwiftFit App"><i class="fas fa-running"></i><span>SwiftFit</span></a>
+                    <a href="#projects" class="f-icon-container" title="Wanderlust"><i class="fas fa-plane"></i><span>Wanderlust</span></a>
+                    <a href="#projects" class="f-icon-container" title="ADAS System"><i class="fas fa-car"></i><span>ADAS</span></a>
+                </div>
+            </div>
+
             <div class="hero-buttons">
                 <a href="#contact" class="btn-primary interactive-btn">Hire Me <i class="fas fa-paper-plane"></i></a>
                 <a href="./images/CHILIKURI_PAVAN_KUMAR_FlowCV_Resume_2026-03-18.pdf" target="_blank" class="btn-secondary interactive-btn"><i class="fas fa-arrow-down"></i> Download CV</a>
@@ -318,7 +341,7 @@
         <div class="hero-image-container reveal" style="transition-delay: 0.2s;">
             <div class="rotating-ring"></div>
             <div class="rotating-ring inner"></div>
-            <img src="images/WhatsApp Image 2026-03-16 at 12.49.26 PM.jpeg" alt="Chilikuri Pavan Kumar" class="profile-pic">
+            <img src="images/80327-removebg-preview (1).png" alt="Chilikuri Pavan Kumar" class="profile-pic">
         </div>
     </section>
 
